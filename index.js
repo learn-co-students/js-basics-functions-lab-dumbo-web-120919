@@ -26,29 +26,31 @@ function calculatesFarePrice(start, finish) {
     const distance = distanceTravelledInFeet(start, finish);
 
     // WHY IS THIS SWITCH STATEMENT NOT WORKING?
-    // switch (distance) {
-    //     case distance <= 400:
-    //         return 0;
-    //         // break;
-    //     case distance > 400 && distance <= 2000:
-    //         return (distance - 400) * 0.02;
-    //         // break;
-    //     case distance > 2000 && distance < 2500:
-    //         return 25;
-    //         // break;
-    //     default:
-    //         return 'cannot travel that far';
-    //         // break;
-    // }
-
-    if (distance <= 400) {
-        return 0;
-    } else if (distance > 400 && distance <= 2000) {
-        return (distance - 400) * 0.02;
-    } else if (distance > 2000 && distance < 2500) {
-        return 25;
-    } else {
-        return 'cannot travel that far';
+    // ANS: the switch evaluation should be true
+    // referece: https://love2dev.com/blog/javascript-switch-statement/
+    switch (true) {
+        case distance <= 400:
+            return 0;
+            // break;
+        case distance > 400 && distance <= 2000:
+            return (distance - 400) * 0.02;
+            // break;
+        case distance > 2000 && distance < 2500:
+            return 25;
+            // break;
+        default:
+            return 'cannot travel that far';
+            // break;
     }
+
+    // if (distance <= 400) {
+    //     return 0;
+    // } else if (distance > 400 && distance <= 2000) {
+    //     return (distance - 400) * 0.02;
+    // } else if (distance > 2000 && distance < 2500) {
+    //     return 25;
+    // } else {
+    //     return 'cannot travel that far';
+    // }
 
 }
